@@ -1,10 +1,10 @@
-title : Blog Title
-tagline: Blog Tagline
+title : The Personal Blog of Jirka Maršík
+tagline: 
 author :
-  name : Firstname Lastname
-  email : blah@email.test
-  github : username
-  twitter : username
+  name : Jiří Maršík
+  email : jiri.marsik89@gmail.com
+  github : jirkamarsik
+  twitter : jirkamarsik
   feedburner : feedname
 
 navigation :
