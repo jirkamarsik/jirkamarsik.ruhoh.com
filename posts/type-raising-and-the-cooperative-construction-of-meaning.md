@@ -46,9 +46,9 @@ either computed through composition or obtained from the lexicon. Note
 that the bold parentheses do not correspond to lambda calculus
 function applications, they are part of the produced FOPL formulas. I
 will always mark lambda applications explicitly with the @ symbol. I
-have also taken the liberty to assign types to the lambda terms. The
-two atomic types that come naturally in the domain of FOPL formulas
-are terms (t) and formulas (f).
+have also taken the liberty of assigning types to the lambda terms.
+The two atomic types that come naturally in the domain of FOPL
+formulas are terms (t) and formulas (f).
 
 The lexicon I show here is very straightforward. We map the proper
 noun "Vincent" onto a constant and the intransitive verb "growls" onto
@@ -135,9 +135,9 @@ We represent common nouns as unary predicates (sets of entities are
 after all a natural denotation for common nouns). As for the
 quantifier, we map it to a function that builds a universal
 quantification (see [generalized quantifiers] [GQ]). The first
-argument is the restricting predicate which the defines the range of
-the variable, the second argument is the predicate which is to be true
-in the domain of quantification.
+argument is the restricting predicate which defines the range of the
+variable, the second argument is the predicate which is to be true in
+the domain of quantification.
 
   [GQ]: http://en.wikipedia.org/wiki/Generalized_quantifier
 
@@ -247,13 +247,14 @@ of "likes a woman" to look like.
   style="color:red">**like(**y**, <span
   style="color:orange">y</span>)**</span>**)**</span></span> : t → f
 
-The above is one reasonable answer (Beware of the two ys! The orange,
-bold one belongs to the constructed FOPL formula and was contributed
-by "a". The red, plain one is part of the lambda calculus and should
-belong to "like".). These semantics for "likes a woman" look good. If
-we apply them to a term, they yield a formula stating that the entity
-named by the term does indeed "like a woman", i.e. what we have is a
-working predicate.
+The above is one reasonable answer (Beware of the two ys! The <span
+style="color:orange">**orange bold one**</span> belongs to the
+constructed FOPL formula and was contributed by "a". The <span
+style="color:red">red plain one</span> is part of the lambda calculus
+and should belong to "like".). These semantics for "likes a woman"
+look good. If we apply them to a term, they yield a formula stating
+that the entity named by the term does indeed "like a woman", i.e.
+what we have is a working predicate.
 
 Now that we know what we want, it is not so difficult to work out the
 correct version of the "likes" semantics on paper.
@@ -262,7 +263,7 @@ correct version of the "likes" semantics on paper.
     ↦ <span style="color:red">λO. λy. O@(λx. **like(**y**,** x**)**)</span>
     : ((t → f) → f) → t → f
 
-OK, that looks good. Let's check if it works.
+OK, that looks good. Let's check if the whole thing works.
 
   * "Every boxer" ↦ <span style="color:green">λQ. **∀x. (**<span
   style="color:blue">**boxer(<span
@@ -369,7 +370,7 @@ style="color:red">O</span> is the meaning of "Mia", the object sends
 <span style="color:green">**mia**</span> as the term to represent it
 and returns the relation. When <span style="color:red">O</span> is a
 quantified phrase like "a woman", it sends the logical variable <span
-style="color:orange">**y**</span> as the value of <span
+style="color:orange">**y**</span> as its representative <span
 style="color:red">x</span> and it wraps the resulting relation in a
 quantifier providing a range for <span
 style="color:orange">**y**</span>.
@@ -419,7 +420,7 @@ style="color:teal">woman(<span style="color:orange">y</span>)</span>
 quantifier. "Likes" will build the formula (<span
 style="color:red">**like(**y, ...*)*</span>), but not without taking a
 term to place in the relation from the object (<span
-style="color:orange">**y**</span>). In other terms, the function
+style="color:orange">**y**</span>). In other words, the function
 assigned by the lexicon to "likes" is a fourth-order function, which
 calls the third-order function corresponding to "a woman", which calls
 the second-order lambda function defined within "likes" which uses the
@@ -471,7 +472,7 @@ our verbs.
 In the case of the intransitive verb, we simply type raise the VP
 using the general type raising rule we have used on proper nouns
 before. For "likes", it is a little bit more complicated. "Likes" is a
-transitive verb, that is, it is a function from an NP to a VP. So
+transitive verb. That is, it is a function from an NP to a VP. So
 first, we have to strip away the outer lambda abstraction to get the
 VP body contained inside and then we mechanically apply the type
 raising rule on that VP term, changing <span style="color:red">λy.
