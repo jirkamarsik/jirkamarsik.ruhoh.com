@@ -419,10 +419,10 @@ style="color:teal">woman(<span style="color:orange">y</span>)</span>
 quantifier. "Likes" will build the formula (<span
 style="color:red">**like(**y, ...*)*</span>), but not without taking a
 term to place in the relation from the object (<span
-style="color:orange">**y**</span>). The function assigned by the
-lexicon to "likes" is a fourth-order function, which calls the
-third-order function corresponding to "a woman", which calls the
-second-order lambda function defined within "likes" which uses the
+style="color:orange">**y**</span>). In other terms, the function
+assigned by the lexicon to "likes" is a fourth-order function, which
+calls the third-order function corresponding to "a woman", which calls
+the second-order lambda function defined within "likes" which uses the
 first-order argument x supplied to it by the object "a woman".
 
 This kind of there-and-back-again exchange of control is enforced by
