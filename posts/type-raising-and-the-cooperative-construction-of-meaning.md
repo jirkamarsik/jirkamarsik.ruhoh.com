@@ -428,11 +428,12 @@ first-order argument x supplied to it by the object "a woman".
 This kind of there-and-back-again exchange of control is enforced by
 the interleaved syntactic structure of the FOPL formulas we want to
 produce (the colors corresponding to the individual lexical items do
-not form sovereign subtrees). Each of the two constituents to be
-combined contains only the information strictly contained in its
-subtree. To combine these two pieces of information into an elaborate
-structure, the two lambda terms have to cooperate with each other,
-exchanging continuation-like lambda functions.
+not form sovereign subtrees) and the principle of compositionality.
+Each of the two constituents to be combined contains only the
+information strictly contained in its subtree. To combine these two
+pieces of information into an elaborate structure, the two lambda
+terms have to cooperate with each other, exchanging continuation-like
+lambda functions.
 
 
 One Last Jump
