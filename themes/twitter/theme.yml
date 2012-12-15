@@ -6,14 +6,24 @@
     ],
    
     "widgets" : {
-      "google_prettify" : "twitter-bootstrap.css"
+      "syntax_highlighter" : [
+        "shCore.css",
+        "shThemeDefault.css"
+      ]
     }
     
   },
 
   "javascripts" : {
     "default" : [
-    ]
+    ],
+
+    "widgets" : {
+      "syntax_highlighter" : [
+        "shCore.js",
+        "shAutoloader.js"
+      ]
+    }
   },
   
   "manifest" : {
