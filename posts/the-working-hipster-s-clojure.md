@@ -94,15 +94,18 @@ though I hit some rough spots with respect to termination.
 Here is a useful predicate I have defined along the way. It works just
 like Prolog's ```append/3```, but it is variadic, meaning it can take
 an arbitrary number of arguments. This has proven to be very useful in
-destructuring lists (see ```fix-flat-npo``` for example use) given
-that the alternative (in both Prolog and "vanilla" core.logic) is to
-introduce lots of new variables. A gotcha I encountered when writing
-this predicate is that if you write it with the recursive call at the
-tail and then invoke it with a fresh first argument, the solver will
-find all the correct solutions, but when asked for more, it will never
-terminate (Fun, right? OK, by now you might've guessed I'm into this
-whole logic programming thing only because functional programming was
-getting way too comfortable and mainstream).
+destructuring lists (see ```fix-flat-npo``` for
+[example use][poly-appendo]) given that the alternative (in both
+Prolog and "vanilla" core.logic) is to introduce lots of new
+variables. A gotcha I encountered when writing this predicate is that
+if you write it with the recursive call at the tail and then invoke it
+with a fresh first argument, the solver will find all the correct
+solutions, but when asked for more, it will never terminate (Fun,
+right? OK, by now you might've guessed I'm into this whole logic
+programming thing only because functional programming was getting way
+too comfortable and mainstream).
+
+  [poly-appendo]: https://gist.github.com/4323107#file-preprocess-clj-L120
 
 One more example.
 
