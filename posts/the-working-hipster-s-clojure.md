@@ -164,8 +164,8 @@ so there is syntactic sugar for that, allowing you to write
 ```^:approved idol``` instead of ```^{:approved true} idol``` for any
 keyword, such as ```:approved```. Finally, there is also syntactic
 sugar for a keyword qualified in the current namespace. If the current
-namespace is ```germany.berlin```, you can write ```::approved```
-instead of ```:germany.berlin/approved```. So, by writing ```^::rule
+namespace is ```music.genres```, you can write ```::post-indie```
+instead of ```:music.genres/post-indie```. So, by writing ```^::rule
 fix-adjunctiono``` in my namespace ```grook.preprocess```, I am
 basically saying ```^{:grook.preprocess/rule true} fix-adjunctiono```.
 This way of prefixing symbols with modifiers might be familiar to you
