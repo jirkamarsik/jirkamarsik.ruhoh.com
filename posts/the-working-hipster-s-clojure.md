@@ -36,7 +36,7 @@ afternoon. Our process was to start with a naive program, run it on
 the data, query the results to find potential problems, introduce
 constraints in the algorithm to fix the problems we found and repeat
 until all problems were resolved. After that, I extended the algorithm
-to one more phenomena which we have discovered and tried to make it
+to one more phenomenon which we have discovered and tried to make it
 fit for public display by replacing inside jokes with comments.
 
 I wrote the program in Clojure and since I wanted to post something
@@ -148,7 +148,7 @@ basically a disjunction over all the defined rules in my system.
 One way to do this would be to have a place in your program where you
 manually call all the rules you have defined one by one, but then you
 have to update this list of calls everytime you rename/add/remove a
-rule. Another way could be to create a big data structure and store
+rule. Another way would be to create a big data structure and store
 all the rules inside of it as anonymous functions. Depending on your
 language, this is probably not the most convenient way to write and
 test functions. In Clojure, you can have the comfort of defining the
@@ -157,7 +157,7 @@ maintain an extra list of calls to your rules, thanks to its
 metaprogramming facilities. But before we go any further, let's look
 at the strange series of glyphs that started this whole discussion.
 
-In Clojure data structures (ergo, in Clojure code), you can annotate
+In Clojure data structures (ergo, also in Clojure code), you can annotate
 collections and symbols with metadata. Metadata are simple Clojure
 maps and you can associate them to an item such as a symbol by putting
 ```^``` followed by a metadata map and the symbol you want to
@@ -184,7 +184,7 @@ extensible (just like XML, even with the namespaces
 OK, now back to the metaprogramming part. Whenever you evaluate a
 ```def``` form in Clojure, any metadata you put on the symbol that
 names the new Var is inherited by the defined Var itself. This Var is
-[reified][reification] entity inside your program, meaning you can
+a [reified][reification] entity inside your program, meaning you can
 query and work with it as you would with any other value in your
 program. So, for example, we can write a macro that generates that
 long boring disjunction for us (OK, the generated disjunction in my
@@ -307,7 +307,7 @@ like this:
 
     If you bind a value to *fix-tree-adjunctions*, a record of every
     adjunction performed by fix-tree will be conjed onto it. If
-    you also bind a value to *fix-tree-current-name*, it will
+    you also bind a value to *fix-tree-current-name*, it will be
     incorporated into the generated records.
 
 Now I can use ```fix-tree``` on arbitrary trees without it mutilating
@@ -322,14 +322,14 @@ the performed adjunctions back to the top-level caller.
 
 <script src="https://gist.github.com/4336851.js"></script>
 
-Now we have a function which doesn't muck up any shared state and
+Now we have a function that doesn't muck up any shared state and
 whose results are determined solely by its inputs. At the same time
 though, it can easily yield a detailed log of its activity if the
 caller opts in to it by binding a value to which the log should be
-appended before calling the function proper. We managed that by just
+appended before calling the function proper. We managed that just by
 hooking up our code with calls to a very brief logging function
 instead of having to translate our code into some monad (if your code
-already was in a monad and all you had to do was to apply a monadic
+already was in a monad and all you had to do was to apply a monad
 transformer, then more power to you :-)).
 
 OK, that's all I've got today. You can find the full program at
