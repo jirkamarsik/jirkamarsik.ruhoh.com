@@ -8,6 +8,6 @@ Here is a
 
 UPDATE 12/04 22.37: OK, it's booked now. The next Clojure seminar will
 be on the 21/02 at 15.30 in C003. We will look at how to iterate using
-recursion, what are the collection abstraction in Clojure and how to
-efficiently manipulate them using the standard of higher-order
-functions, i.e. how to actually do really useful stuff in an easy way.
+recursion, what are the collection abstractions in Clojure and how to
+efficiently manipulate them using the standard higher-order functions,
+i.e. how to actually do really useful stuff in an easy way.
