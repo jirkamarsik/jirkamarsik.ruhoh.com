@@ -20,3 +20,14 @@ Install LaTeX:
   * [MiKTeX](http://miktex.org/), common on Windows
   * [MacTeX](http://tug.org/mactex/) for Mac
   * [TeX Live](http://www.tug.org/texlive/), universal, popular on GNU/Linux and *BSD
+
+LaTeX editors:
+
+  * [TeXstudio](http://texstudio.sourceforge.net/)
+  * [Texmaker](http://www.xm1math.net/texmaker)
+
+Reference material:
+
+  * [LaTeX wikibook](http://en.wikibooks.org/wiki/LaTeX)
+  * [TeX StackExchange](http://tex.stackexchange.com/)
+  * [Google](http://www.google.com/)
