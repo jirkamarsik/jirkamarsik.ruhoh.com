@@ -31,3 +31,5 @@ Reference material:
   * [LaTeX wikibook](http://en.wikibooks.org/wiki/LaTeX)
   * [TeX StackExchange](http://tex.stackexchange.com/)
   * [Google](http://www.google.com/)
+
+If you have any questions, contact me at [jiri.marsik@loria.fr](mailto:jiri.marsik@loria.fr).
